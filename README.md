@@ -61,7 +61,7 @@ static void Swap2(ref int a,ref int b){
     c=a;a=b;b=c;
 }
 ```
-*<font color=#AAFFBB>swap1是传值无法交换两个数</font>*    
+*<font color="000FBB">swap1是传值无法交换两个数</font>*    
 *swap2是传址操作可以交换两个数*
 
 
