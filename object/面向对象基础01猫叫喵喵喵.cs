@@ -29,7 +29,9 @@ public void CheaseMice(){
 }
 
 
+}
 
+class program{
 //调用演示
 static void Main(string[] args){
 //声明类成员对象
@@ -37,7 +39,9 @@ static void Main(string[] args){
     xiaoW.name="旺财猫";
     xiaoW.age=2;
     
-    xiaoW.SayHello();
+    
+    //xiaoW.SayHello(); 这种不可以直接调用类的私有方法
+    //xiaoW.miceCount=9;    也不可以改变类的内部私有变量
     xiaoW.Meow();
     xiaoW.CheaseMice();
     xiaoW.CheaseMice();
