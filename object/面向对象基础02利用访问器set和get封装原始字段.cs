@@ -102,5 +102,5 @@ namespace 类的学习02属性get和set访问器
             xiaoW.CheaseMice();
             Console.Read();
         }
-    }
+    }    
 }
