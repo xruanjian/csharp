@@ -24,6 +24,26 @@ DOS 1.0 只有 4000 行汇编代码，可以运行在 8KB 的内存中；而 200
 
 
 ### 面向对象基本概念
+#####  静态和非静态的区别
+[静态类和成员实例代码](https://github.com/xruanjian/csharp/blob/master/object/%E9%9D%99%E6%80%81%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB.cs)
+
+静态类最多的地方的是程序配置部分，或者作为通用工具类。因为他的共享特性，在多个窗体中都需要调用，更主要的就是他在程序启动的时候就被初始化了
+
+###### 1. 非静态类既可以有实例成员，又可以有静态成员调用实例成员的时候，采用 类名.静态成员名
+###### 2. 静态成员必须用类名去调用。而实例成员允许用对象名来调用。静态类的本质，是一个抽象的密封类，所以不能被继承，也不能被实例化，不能包含实例构造函数。如果一个类下面的所有成员，都需要被共享，那么可以把这个类定义为静态类。因为静态类初始就加载到内存，程序结束才会释放，所以尽量少用
+
+> 静态函数中，只能访问静态变量，不允许访问实例成员
+
+> 实例函数中，既可以使用静态成员，有可以使用实例成员。
+
+> 静态类只允许有静态成员，不允许有实例成员
+
+> 静态类可以有构造函数，但是只被调用一次。
+
+
+
+
+
 
 ###### 面向对象最主要特点:封装  继承  多态
 
@@ -219,3 +239,61 @@ Hillo,This is mouse:非法猫
 Hillo,This is mouse:非法猫    
 我已经抓了2只老鼠了
 *
+
+#### 三:构造函数
+[构造函数示例](https://github.com/xruanjian/csharp/blob/master/object/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%8003%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.cs)
+
+
+> 构造函数作用:帮助我们初始化变量。
+
+*构造函数是一种特殊的方法
+构造函数没有返回值，连void也不能写    
+构造函数必须和类同名    
+构造函数在类new的过程中，就开始初始化了*
+
+定义一个类测试:
+```
+class Cat{
+//类字段默认都是private不用写也可以
+private string _name;
+public string Name{get{return _name;}set{this._name=value;}}
+
+int _age;
+public int Age{get{return _age;}set{this._age=value;}}
+
+int _miceCount;
+public int MiceCount{get{return _miceCount;}set{this._miceCount=value;}}
+```
+紧跟以上代码在类中定义构造函数:
+
+```
+//类中添加构造函数1
+public Cat(string nameValue,int ageValue,int miceCountValue){
+   //初始化变量
+   this.Name=nameValue;
+   this.Age=ageValue;
+   this.MiceCount=0;
+   Console.WriteLine("我利用第一个构造函数,把老鼠名字初始化为{0}，年龄{1},抓了老鼠为{2}",this.Name,this.Age,this.MiceCount);
+}
+
+
+//添加构造函数2
+public Cat(string nameValue,int miceCountValue){
+     this.Name=nameValue;
+     this.MiceCount=miceCountValue;
+     Console.WriteLine("构造函数可以有好几个，第二个构造函数只初始化两个变量,该名字{0},还有老鼠数{1}  年龄是被编译器初始化为{2}",this.Name,this.MiceCount,this.Age);
+}
+
+```
+定义两个实例测试下
+```
+static void Main(string[] args){
+      //注意new的过程中，构造函数初始化代码就会运行
+      Cat wangC1=new Cat("旺财猫1",2,3);
+      Cat wangC2=new Cat("旺财猫2",8);
+}
+```
+结果:
+
+*我利用第一个构造函数,把老鼠名字初始化为旺财猫1，年龄2,抓了老鼠为0    
+构造函数可以有好几个，第二个构造函数只初始化两个变量,该名字旺财猫2,还有老鼠数8  年龄是被编译器初始化为0*
