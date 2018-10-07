@@ -1,6 +1,6 @@
 using System;
 
-namespace 构造函数{
+namespace 构造函数和析构函数{
 
 class Cat{
 private string _name;
@@ -28,6 +28,17 @@ public Cat(string nameValue,int miceCountValue){
      this.MiceCount=miceCountValue;
      Console.WriteLine("构造函数可以有好几个，第二个构造函数只初始化两个变量,该名字{0},还有老鼠数{1}  年龄是被编译器初始化为{2}",this.Name,this.MiceCount,this.Age);
 }
+
+//一般c#的GC(garbage collection垃圾回收器)程序结束会自动释放内存，但是我们会手动进行结束，使用析构函数，在程序结束时候执行
+
+~ Cat{
+  Console.Write("试试析构函数，程序结束时候执行");
+}
+
+
+
+
+
  
 }
 class program{
