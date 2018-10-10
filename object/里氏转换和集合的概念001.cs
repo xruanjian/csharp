@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace 里氏转换_集合_arraylist01.cs
+namespace 里氏转换和集合的概念001.cs
 {
 /*
         在 C# 中，派生类可以包含与基类方法同名的方法。
