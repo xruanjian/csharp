@@ -35,17 +35,4 @@ namespace 里氏转换和集合的概念002
     
     }
 
-}��无法直接使用。因为不static需要实例对象才可以使用
-        public static void printList(ArrayList list) {
-            for (int j = 0; j < list.Count; j++)
-            {
-                Console.WriteLine(list[j]);
-            }
-        }
-        static void Main(string[] args) {
-            ArrayList list = new ArrayList();
-            //添加单个元素
-            list.Add(1);
-            list.Add("测试字符串");
-            //添加集合元素,他和add单个元素的区别，添加单个元素，如果要遍历的画，无法遍历到集合元素内部，这个可以
-            l
+}
