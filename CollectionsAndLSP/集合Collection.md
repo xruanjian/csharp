@@ -109,6 +109,13 @@ string str=new string(ch);
 装箱:是指将值类型转换为引用类型    
 拆箱:指的是将引用类型转换为值类型
 
+平时应该尽量避免发生装箱拆箱，以免影响效率。
+
+```
+string str="12345";
+//发生拆箱操作
+int i=Convert.ToInt32(str);
+```
 
 List<T>和Dictionary<Key,Value>泛型集合相对于普通ArrayList和Hashtable,对传递的参数进行了限制。泛型相比普通集合，不需要频繁的拆箱装箱，大大增强了效率，大多数情况下，泛型执行的更好并且更安全。
 
