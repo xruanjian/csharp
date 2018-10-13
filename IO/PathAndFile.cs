@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Diagnostics;
+using System.Text;
 
 class FileTest{
 static void Main(string[] args){
@@ -28,7 +29,7 @@ Path 类
    Console.WriteLine(Path.GetFullPath(pathStr));
    
    //将两个字符串合并为一个路径
-   Console.WriteLine(Path.Combine(@"c:\\Administrator","\1.txt"));
+   Console.WriteLine(Path.Combine(@"c:\Administrator",@"\1.txt"));
 
 /*
 File类
@@ -44,12 +45,36 @@ File类
 
    File.Copy(@"苍老师.txt","苍井空.txt");
 
-   File.Move(@"苍井空.txt","../苍井空.txt");
+   File.Move(@"苍井空.txt",@"..\苍井空.txt");
 
    File.Delete(@"苍老师.txt");
 
-   
+/*
+以上是Create,Delete,Move和Copy
+下面开始Read和Write
+Encoding类可以指定写入或者读取的格式。有
+UTF-8     GB2312   GBK  Unicode
+*/
 
+   /*
+   ###########写数据################
+   */
+   string str="苍老师大片，苍老师是处女";
+   //需要将字符串转换为字节数组
+   byte[] buffer1=Encoding.Default.GetBytes(str);
+   
+   File.WriteAllBytes(@"..\写入测试.txt",buffer1);
+   Console.WriteLine("写入成功");
+   
+/*
+##########读取测试#################
+*/
+
+   byte[] buffer=File.ReadAllBytes(@"..\写入测试.txt");
+   
+   string s=Encoding.Default.GetString(buffer);
+
+   Console.WriteLine(s);
    Console.Read();
 
 }
