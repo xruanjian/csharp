@@ -1,0 +1,42 @@
+namespace Filestream示例
+{
+    class Program
+    {
+        //使用FileStream复制字节数据。深入理解这个过程
+        
+        
+        
+        public static void CopyFile(string source,string target){
+            //创建一个读取的流
+            using (FileStream fReader = new FileStream(source, FileMode.Open, FileAccess.Read)) {
+                //创建一个写入流
+                using (FileStream fWriter = new FileStream(target, FileMode.OpenOrCreate, FileAccess.ReadWrite)) {
+                    //定义一个6M字节数组存取字节流
+                    byte[] buffer = new byte[1024 * 1024 * 6];
+                    //因为文件可能会很大，所以循环读写
+                    while (true) {
+                        //返回本次读取到的字节数
+                        int num = fReader.Read(buffer,0,buffer.Length);
+                        //如果返回0表示读取完了
+                        if (num != 0)
+                        {
+                            fWriter.Write(buffer, 0, num);
+                        }
+                        else {          //为0，说明读不到数据，已经是末尾
+                            break;
+                        }
+                    }
+                }
+            }
+        
+        }
+        static void Main(string[] args)
+        {
+            string source = @"C:\Users\Administrator\Desktop\ipmsg.exe";
+            string target=@"C:\Users\Administrator\Desktop\飞鸽.exe";
+            CopyFile(source, target);
+            Console.WriteLine("复制字节文件成功");
+            Console.Read();
+        }
+    }
+}
