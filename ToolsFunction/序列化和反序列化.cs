@@ -4,7 +4,9 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 /*
 
-序列化的意义:传输作用
+序列化的意义:传输数据的作用
+序列化:将对象转换为二进制
+反序列化:将二进制转换为对象
 
 
 序列化的类型
