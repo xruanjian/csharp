@@ -1,0 +1,6 @@
+c:\users\administrator\documents\visual studio 2013\Projects\超市收银系统\超市收银系统\bin\Debug\超市收银系统.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\超市收银系统\超市收银系统\bin\Debug\超市收银系统.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\超市收银系统\超市收银系统\bin\Debug\超市收银系统.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\超市收银系统\超市收银系统\obj\Debug\超市收银系统.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\超市收银系统\超市收银系统\obj\Debug\超市收银系统.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\超市收银系统\超市收银系统\obj\Debug\超市收银系统.pdb
