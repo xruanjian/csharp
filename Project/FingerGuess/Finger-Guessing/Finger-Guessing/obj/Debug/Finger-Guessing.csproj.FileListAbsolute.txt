@@ -1,0 +1,9 @@
+c:\users\administrator\documents\visual studio 2013\Projects\Finger-Guessing\Finger-Guessing\bin\Debug\Finger-Guessing.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\obj\Debug\Finger-Guessing.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\obj\Debug\Finger_Guessing.Form1.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\obj\Debug\Finger_Guessing.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\obj\Debug\Finger-Guessing.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\bin\Debug\Finger-Guessing.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\bin\Debug\Finger-Guessing.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\obj\Debug\Finger-Guessing.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\Finger-Guessing\Finger-Guessing\obj\Debug\Finger-Guessing.pdb
