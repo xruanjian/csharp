@@ -149,7 +149,7 @@ static double VolumeOfColumn(double r,double h=1,double pi=3.14){
 ---
 ## [第二部分: 面向对象编程OOP(Object-oriented Programming)](https://github.com/xruanjian/csharp/blob/master/object/Tutorial/OOP.md)
 
-####[2.1继承](https://github.com/xruanjian/csharp/blob/master/object/Tutorial/%E7%BB%A7%E6%89%BF.md)
+#### [2.1继承](https://github.com/xruanjian/csharp/blob/master/object/Tutorial/%E7%BB%A7%E6%89%BF.md)
 
 ##### [下面学习前理解里式转换](https://github.com/xruanjian/csharp/blob/master/CollectionsAndLSP/%E9%87%8C%E5%BC%8F%E8%BD%AC%E6%8D%A2.md)
 
