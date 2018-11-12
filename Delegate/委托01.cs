@@ -24,6 +24,16 @@ static void Main(string[] args){
    Conv cv2=ChainStr;
    cv2(names);
    
+   Console.WriteLine("########下面是组合委托#######");
+   //使用组合委托
+   Conv cv3=ConvertLower;
+   cv3=cv3+cv2;
+   cv3(names);
+   
+   Console.WriteLine("########下面是给委托增加方法#######");
+   //给委托实例01增加方法ChainStr
+   cv1+=ChainStr;
+   cv1(names);
    Console.ReadKey();
 }
 
